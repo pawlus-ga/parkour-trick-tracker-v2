@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Add a New Trick</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+
+    <h1>Add a New Trick</h1>
+
+    <div class="new-body">
+      <form action="/users/<%= user._id %>/tricks" method="POST">
+
+        <label for="name">Trick Name:</label>
+        <input type="text" name="name" id="name" required />
+
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+          <option value="flips">Flips</option>
+          <option value="wallFlips">Wall Flips</option>
+          <option value="vaults">Vaults</option>
+          <option value="transitions">Transitions</option>
+        </select>
+
+        <label for="stomped">Stomped:</label>
+        <select id="stomped" name="stomped" required>
+          <option value="not landed">Not Landed</option>
+          <option value="landed once">Landed Once</option>
+          <option value="inconsistent">Inconsistent</option>
+          <option value="semi-consistent">Semi-Consistent</option>
+          <option value="consistent">Consistent</option>
+        </select>
+
+        <label for="takeoff">Takeoff:</label>
+        <select id="takeoff" name="takeoff">
+          <option value="n/a">n/a</option>
+          <option value="flatground">Flatground</option>
+          <option value="off ledge">Off Ledge</option>
+        </select>
+
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty" name="difficulty" required>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+          <option value="pro">Pro</option>
+        </select>
+
+        <label for="notes">Notes:</label>
+        <textarea name="notes" id="notes"></textarea>
+
+        <button type="submit">Add Trick</button>
+      </form>
+    </div>
+  </body>
+</html>

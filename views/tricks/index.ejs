@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Your Tricks</title>
+</head>
+<body>
+<%- include('../partials/_navbar.ejs') %>
+<div class="all-tricks-body">
+    <div class="all-tricks-header">
+        <h1>Your Tricks</h1>
+        <a class="add-trick-link" href="/users/<%=user._id%>/tricks/new">Add a Trick</a>
+    </div>
+    <ul>
+        <% tricks.forEach
+        ((trick) => { %> 
+        <li>
+            <strong>
+            <a href="/users/<%= user._id%>/tricks/<%=trick._id %>">
+                <%= trick.name %> </a> </strong>
+                <ul class="trick-details">
+                <li>Category: <%= trick.category %></li>
+                <li>Stomped: <%= trick.stomped %></li>
+                <li>Takeoff: <%= trick.takeoff %></li>
+                <li>Difficulty: <%= trick.difficulty %></li>
+                </ul>
+        </li>
+       <% }) %>
+    </ul>
+</div>
+</body>
+</html>

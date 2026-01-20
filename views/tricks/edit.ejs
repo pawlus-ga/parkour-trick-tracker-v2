@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Edit <%= trick.name %></title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+
+    <h1>Editing <%= trick.name %></h1>
+
+    <div class="edit-body">
+      <form
+        action="/users/<%= user._id %>/tricks/<%= trick._id %>?_method=PUT"
+        method="POST"
+      >
+        <label for="name">Trick Name:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          value="<%= trick.name %>"
+          required
+        />
+
+        <label for="category">Category:</label>
+        <select name="category" id="category" required>
+          <option value="flips" <%= trick.category === 'flips' ? 'selected' : '' %>>Flips</option>
+          <option value="wallFlips" <%= trick.category === 'wallFlips' ? 'selected' : '' %>>Wall Flips</option>
+          <option value="vaults" <%= trick.category === 'vaults' ? 'selected' : '' %>>Vaults</option>
+          <option value="transitions" <%= trick.category === 'transitions' ? 'selected' : '' %>>Transitions</option>
+        </select>
+
+        <label for="stomped">Stomped:</label>
+        <select name="stomped" id="stomped">
+          <option value="not landed" <%= trick.stomped === 'not landed' ? 'selected' : '' %>>Not Landed</option>
+          <option value="landed once" <%= trick.stomped === 'landed once' ? 'selected' : '' %>>Landed Once</option>
+          <option value="inconsistent" <%= trick.stomped === 'inconsistent' ? 'selected' : '' %>>Inconsistent</option>
+          <option value="semi-consistent" <%= trick.stomped === 'semi-consistent' ? 'selected' : '' %>>Semi-Consistent</option>
+          <option value="consistent" <%= trick.stomped === 'consistent' ? 'selected' : '' %>>Consistent</option>
+        </select>
+
+        <label for="takeoff">Takeoff:</label>
+        <select name="takeoff" id="takeoff">
+          <option value="n/a">— n/a —</option>
+          <option value="flatground" <%= trick.takeoff === 'flatground' ? 'selected' : '' %>>Flatground</option>
+          <option value="off ledge" <%= trick.takeoff === 'off ledge' ? 'selected' : '' %>>Off Ledge</option>
+        </select>
+
+        <label for="difficulty">Difficulty:</label>
+        <select name="difficulty" id="difficulty" required>
+          <option value="easy" <%= trick.difficulty === 'easy' ? 'selected' : '' %>>Easy</option>
+          <option value="medium" <%= trick.difficulty === 'medium' ? 'selected' : '' %>>Medium</option>
+          <option value="hard" <%= trick.difficulty === 'hard' ? 'selected' : '' %>>Hard</option>
+          <option value="pro" <%= trick.difficulty === 'pro' ? 'selected' : '' %>>Pro</option>
+        </select>
+
+        <label for="notes">Notes:</label>
+        <textarea name="notes" id="notes"><%= trick.notes || '' %></textarea>
+
+        <button type="submit">Update Trick</button>
+      </form>
+    </div>
+  </body>
+</html>

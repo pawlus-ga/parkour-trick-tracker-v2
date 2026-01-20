@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #d9d9d9;
+  margin: 0;
+  padding: 0;
+}
+
+.show-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;             
+  padding: 40px 40px;           
+  box-sizing: border-box;
+  gap: 24px;
+}
+
+.show-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: #5f5f5f;
+  padding: 26px 16px;
+  box-sizing: border-box;
+}
+
+.show-header > h1 {
+  color: white;
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.show-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: auto;    
+  margin: 0;     
+}
+
+button {
+  padding: 10px 18px;
+  background-color: #2a2a2a;
+  color: white;
+  border: 2px solid #2a2a2a;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #666666;
+}
+
+.show-actions > a {
+  background-color: #817f7f;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 10px 18px;
+  border: 2px solid #2a2a2a;
+  text-align: center;
+  display: inline-block;
+}
+.show-actions > a:hover {
+  background-color: #222222;
+}
+
+p {
+  color: #111;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin: 0;
+}
+
+.show-notes-container {
+  width: 90%;
+  margin: 20px 0;
+}
+
+.show-notes-container > a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 1.4em;
+  margin: 20px;
+}
+
+.show-notes-container > a:hover {
+  color: #4b598e;
+}
+
+.show-notes {
+  background-color: #f6e7e7;
+  width: 100%;
+  border: 2px solid #2a2a2a;
+  padding: 24px 20px;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin: 0 0 10px 0;
+  color: #1c2e5b;
+}
+
+.show-notes > p {
+  font-weight: normal;
+  color: #1c2e5b;
+  text-align: left;
+  font-size: 1.1em;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+
+  .show-body {
+    width: calc(100% - 32px);
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 24px 0;
+    gap: 24px;
+  }
+
+  .show-header {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    padding: 20px 16px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .show-header > h1 {
+    font-size: 2.2rem;
+    line-height: 1.05;
+  }
+
+  .show-actions {
+    width: 100%;
+    margin: 0;
+    gap: 12px;
+  }
+
+  .show-actions a,
+  .show-actions button {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+  }
+
+  .show-notes-container {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+  }
+
+  .show-notes-container p {
+    font-size: 1rem;
+  }
+
+  .show-notes {
+    width: 100%;
+    padding: 20px 16px;
+  }
+}

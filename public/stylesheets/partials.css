@@ -1,0 +1,32 @@
+.navbar {
+  background: #8a8a8a;
+  padding: 12px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#nav-header {
+  color: #ce4866;
+  size: 1em !important;
+  margin: 0;
+}
+
+.authlink {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+}
+.authlink:hover {
+  text-decoration: underline;
+  color: white;
+}

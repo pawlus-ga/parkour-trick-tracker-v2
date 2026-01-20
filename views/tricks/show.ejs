@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/show.css" />
+    <title><%= trick.name %></title>
+  </head>
+
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+
+    <div class="show-body">
+      <div class="show-header">
+        <h1><%= trick.name %></h1>
+
+        <div class="show-sidebar">
+          <div class="show-actions">
+            <a href="/users/<%= user._id %>/tricks/<%= trick._id %>/edit">
+              Edit Trick
+            </a>
+
+            <form
+              action="/users/<%= user._id %>/tricks/<%= trick._id %>?_method=DELETE"
+              method="POST"
+            >
+              <button type="submit">Delete Trick</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="show-notes-container">
+        <p>Stomped: <%= trick.stomped %></p>
+        <p>Category: <%= trick.category %></p>
+        <p>Difficulty: <%= trick.difficulty %></p>
+
+        <% if (trick.takeoff) { %>
+          <p>Takeoff: <%= trick.takeoff %></p>
+        <% } %>
+
+        <% if (trick.tutorialUrl) { %>
+          <a href="<%= trick.tutorialUrl %>" target="_blank">View tutorial</a>
+        <% } %>
+
+        <% if (trick.notes) { %>
+          <div class="show-notes">
+            <h2>Notes:</h2>
+            <p><%= trick.notes %></p>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>

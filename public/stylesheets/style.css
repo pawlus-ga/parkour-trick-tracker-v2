@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #d9d9d9;
+  margin: 0;
+  padding: 0;
+}
+
+.index-body {
+  min-height: 100vh;
+  width: 100vw;
+  background: #d9d9d9;
+  color: #111;
+}
+
+.main-header {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.text-container {
+  background: #5f5f5f;
+  color: white;
+  text-align: center;
+  padding: 26px 16px;
+  width: 100%;
+}
+
+.subheader {
+  margin: 8px 0 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  color: white;
+}
+
+.index-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 40px 0;
+}
+
+.auth-links {
+  background: #3e3e3e;
+  padding: 70px 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+}
+
+.signup-link,
+.signin-link {
+  text-decoration: none;
+  background: #e6e6e6;
+  color: #111;
+  border: 2px solid #2a2a2a;
+  font-size: 2rem;
+  padding: 18px 50px;
+  width: 260px;
+  text-align: center;
+}
+
+.signup-link {
+  background-color: #817f7f;
+  color: white;
+  margin: 0 0 20px 0;
+}
+
+.signup-link:hover {
+  background-color: #222222;
+}
+
+.signin-link {
+  background-color: #f6e7e7;
+  color: #1c2e5b;
+  margin: 20px 0 0 0;
+}
+
+.signin-link:hover {
+    color: #e6e6e6;
+  background-color: #666666;
+}
+
+.signin-container,
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  color: #3e3e3e;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 20em;
+  height: 50%;
+  background-color: #3e3e3e;
+  padding: 30px 40px 20px 40px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+input {
+  border: 1px solid rgb(182, 182, 182);
+  padding: 8px;
+}
+
+button {
+  padding: 10px;
+  background-color: #817f7f;
+  color: white;
+  border: none;
+  margin: 15px 0;
+  font-size: 1.1em;
+}
+
+.all-tricks-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.all-tricks-body ul > li {
+    text-align: center;
+}
+
+.all-tricks-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 90%;
+}
+
+.add-trick-link {
+  padding: 10px;
+  background-color: #2a2a2a;
+  color: white;
+  border: none;
+  font-size: 1.1em;
+  padding: 2px 25px;
+  text-decoration: none;
+}
+
+.add-trick-link:hover {
+  background-color: #4aaee8;
+}
+
+.trick-details{
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+}
+
+.trick-details li {
+    margin: 6px 0;
+}
+
+ul {
+  list-style: none;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul > a {
+  text-decoration: none;
+  color: #1c2e5b;
+  width: 50%;
+  background-color: #f6e7e7;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin: 15px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+ul > a:hover {
+  background-color: #4b598e;
+  color: white;
+}
+
+.new-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.new-body > form,
+.edit-body > form {
+  height: 100%;
+}
+
+textarea,
+select {
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+select {
+  margin-bottom: 10px;
+}
+
+.edit-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+
+  .index-container {
+    padding: 24px 16px;
+    gap: 28px;
+    align-items: center; 
+  }
+
+  .text-container {
+    width: calc(100% - 32px); 
+    max-width: 520px;
+    margin: 0 auto;
+    box-sizing: border-box;   
+    text-align: center;       
+  }
+
+  .main-header {
+    font-size: 2.2rem;
+    line-height: 1.05;
+    margin: 0;                
+  }
+
+  .subheader {
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+
+  .auth-links {
+    width: calc(100% - 32px);
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 28px 16px;
+    box-sizing: border-box;
+  }
+
+  .signup-link,
+  .signin-link {
+    width: 100%;
+    max-width: 420px;
+    font-size: 1.4rem;
+    padding: 14px 18px;
+  }
+}

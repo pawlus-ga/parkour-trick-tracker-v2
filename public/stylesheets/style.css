@@ -14,7 +14,12 @@ body {
 .index-body {
   min-height: 100vh;
   width: 100vw;
-  background: #d9d9d9;
+
+  background-image: url('/images/parkour-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   color: #111;
 }
 
@@ -27,7 +32,7 @@ body {
 }
 
 .text-container {
-  background: #5f5f5f;
+  background: rgba(95, 95, 95, 0.5); /* 10% opacity */
   color: white;
   text-align: center;
   padding: 26px 16px;
@@ -50,7 +55,7 @@ body {
 }
 
 .auth-links {
-  background: #3e3e3e;
+  background: rgba(62, 62, 62, 0.1); /* 10% opacity */
   padding: 70px 90px;
   display: flex;
   flex-direction: column;
@@ -71,24 +76,23 @@ body {
 }
 
 .signup-link {
-  background-color: #817f7f;
+  background-color: rgba(129, 127, 127, 0.5); /* 50% opacity */
   color: white;
   margin: 0 0 20px 0;
 }
 
 .signup-link:hover {
-  background-color: #222222;
+  background-color: rgba(34, 34, 34, 0.7);
 }
 
 .signin-link {
-  background-color: #f6e7e7;
+  background-color: rgba(246, 231, 231, 0.5); /* 50% opacity */
   color: #1c2e5b;
   margin: 20px 0 0 0;
 }
 
 .signin-link:hover {
-    color: #e6e6e6;
-  background-color: #666666;
+  background-color: rgba(246, 231, 231, 0.85);
 }
 
 .signin-container,

@@ -46,6 +46,6 @@ app.use('/auth', authController);
 app.use(isSignedIn);
 app.use('/users/:userId/tricks', tricksController);
 
-app.listen(port, () => {
-    console.log(`The express app is ready on port ${port}!`);
+app.listen(process.env.PORT, () => {
+    console.log(`The express app is ready on port ${process.env.PORT}!`);
 });

@@ -1,4 +1,4 @@
-![Parkour Tricks Tracker Screenshot](assets/tracker-homepage.png)
+![Parkour Tricks Tracker Screenshot](assets/tricks-homepage.png)
 # Parkour Tricks Tracker
 
 A full-stack CRUD application that allows users to track, organize, and manage their parkour tricks. Users can create an account, log in, and maintain a personalized list of tricks, updating their progress over time.
